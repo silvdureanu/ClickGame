@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18af6c5f-f03e-4d99-8da7-b9c12c482e07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Secrets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/NonOverlappingTiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/NonOverlappingTiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/OverlappingTiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/OverlappingTiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Tiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Tiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/BasicClassicGameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/BasicClassicGameMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/ClassicGameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/ClassicGameMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/storage/RedisConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/storage/RedisConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Secrets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Secrets.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
