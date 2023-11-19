@@ -1,6 +1,7 @@
 package uk.ungureanu.clickgame.storage;
 import com.google.gson.Gson;
 import redis.clients.jedis.Jedis;
+import uk.ungureanu.clickgame.config.Secrets;
 import uk.ungureanu.clickgame.gamescreens.MainScreen;
 import uk.ungureanu.clickgame.leaderboard.Ranking;
 import uk.ungureanu.clickgame.leaderboard.SerialisableRanking;
@@ -15,9 +16,10 @@ public final class RedisConnection {
     private Jedis handler;
     private RedisConnection() {
         try {
-            this.handler = new Jedis("redis://game-player:mxe8xez0uck!wjw.MXU@redis-11266.c55.eu-central-1-1.ec2.cloud.redislabs.com:11266");
+            this.handler = new Jedis(Secrets.getRedisCloudConnectionToken());
         }
         catch (Exception e) {
+            //Should add fallback local storage. Currently, authentication failure results in a "new" ranking each time
             this.handler = null;
         }
     }

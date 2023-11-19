@@ -5,62 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18af6c5f-f03e-4d99-8da7-b9c12c482e07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/AvoidBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/BasicHardcodedConfigurator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/ChangeBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/CollectBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Configurator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/EntityBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/HardcodedMainScreenConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/MainScreenConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/NonOverlappingTiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/OverlappingTiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Tiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/entities/game/ChangingEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/entities/game/ClassicGameEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/entities/game/FixedEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/entities/game/GameEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/entities/screen/ScreenCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/entities/screen/ScreenEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/entities/screen/ScreenRectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/entities/screen/ScreenSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/BasicClassicGameMaster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/ClassicGameLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/ClassicGameMaster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/GameLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/MainScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/panels/BasicFailGameScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/panels/BasicGameplayScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/panels/BasicNewGameScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/panels/BasicScoreScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/panels/FailGameScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/panels/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/panels/GameplayScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/panels/NewGameScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamescreens/panels/ScoreScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/leaderboard/PlayerRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/leaderboard/Ranking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/leaderboard/SerialisableRanking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/leaderboard/SimplePlayerRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/leaderboard/SimpleRanking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/storage/RankingStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/storage/RedisConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/storage/RedisRanking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/storage/RedisSettingsJSON.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/storage/SettingsStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Secrets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/NonOverlappingTiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/NonOverlappingTiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/OverlappingTiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/OverlappingTiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Tiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/config/Tiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/BasicClassicGameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/BasicClassicGameMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/ClassicGameMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/gamelogic/ClassicGameMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/storage/RedisConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ungureanu/clickgame/storage/RedisConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

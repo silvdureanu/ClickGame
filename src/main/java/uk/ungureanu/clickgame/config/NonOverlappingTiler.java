@@ -18,31 +18,37 @@ public class NonOverlappingTiler implements Tiler {
         this.windowHeight = height;
         this.gm = gm;
     }
-
+    @Override
     public List<ClassicGameEntity> generateEntities() {
+        final int numberElements = 30;
+        int unclickables = 0;
         AvoidBuilder avoids = new AvoidBuilder(this.windowWidth, this.windowHeight, this.gm);
         ChangeBuilder changes = new ChangeBuilder(this.windowWidth, this.windowHeight, this.gm);
         CollectBuilder collects = new CollectBuilder(this.windowWidth, this.windowHeight, this.gm);
         List<ClassicGameEntity> entities = new LinkedList<>();
         boolean overlaps;
         boolean acceptedNew;
+        boolean addedAvoid;
         Random rand = new Random();
-        for(int i=0; i<5; i++) {
+        for(int i=0; i<numberElements; i++) {
             acceptedNew = false;
             while (!acceptedNew) {
                 overlaps = false;
+                addedAvoid = false;
                 int which = rand.nextInt(3);
                 ClassicGameEntity newEntity;
-                switch (which) {
-                    case 0:
-                        newEntity = avoids.createEntity(5, 25);
-                        break;
-                    case 1:
-                        newEntity = changes.createEntity(5, 25);
-                        break;
-                    default:
+                //Too few branches for a case
+                if (which == 0) {
+                    newEntity = avoids.createEntity(5, 25);
+                    addedAvoid = true;
+                }
+                else if (which == 1) {
+                    newEntity = changes.createEntity(5, 25);
+                }
+                else { //which == 2
                         newEntity = collects.createEntity(5, 25);
                 }
+
                 for (ClassicGameEntity entity : entities) {
                     if (newEntity.getScreenEntity().intersects(entity.getScreenEntity().getBounds2D()))
                         overlaps = true;
@@ -50,11 +56,25 @@ public class NonOverlappingTiler implements Tiler {
                 if (!overlaps) {
                     acceptedNew = true;
                     entities.add(newEntity);
+                    if(addedAvoid)
+                        unclickables++;
                 }
             }
 
         }
+        this.injectTotalElements(numberElements,this.gm);
+        this.injectUnclickables(unclickables,this.gm);
         return entities;
+    }
+
+    @Override
+    public void injectTotalElements(int totalElements, ClassicGameMaster gm) {
+        gm.setInitialNumberOfElements(totalElements);
+    }
+
+    @Override
+    public void injectUnclickables(int unclickables, ClassicGameMaster gm) {
+        gm.setUnclickables(unclickables);
     }
 
 

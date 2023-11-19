@@ -18,25 +18,44 @@ public class OverlappingTiler implements Tiler {
         this.windowHeight = height;
         this.gm = gm;
     }
-
+    @Override
     public List<ClassicGameEntity> generateEntities() {
+        final int numberElements = 40;
+        int unclickables = 0;
         AvoidBuilder avoids = new AvoidBuilder(this.windowWidth, this.windowHeight, this.gm);
         ChangeBuilder changes = new ChangeBuilder(this.windowWidth, this.windowHeight, this.gm);
         CollectBuilder collects = new CollectBuilder(this.windowWidth, this.windowHeight, this.gm);
         List<ClassicGameEntity> entities = new LinkedList<>();
         Random rand = new Random();
-        for(int i=0; i<40; i++) {
+        for(int i=0; i<numberElements; i++) {
             int which = rand.nextInt(3);
-            switch(which) {
-                case 0:
-                    entities.add(avoids.createEntity(5,25));
-                case 1:
-                    entities.add(changes.createEntity(5,25));
-                case 2:
-                    entities.add(collects.createEntity(5,25));
+            // Too few branches for a case
+            if (which == 0) {
+                entities.add(avoids.createEntity(5, 25));
+                unclickables++;
+            }
+            else if (which == 1) {
+                entities.add(changes.createEntity(5, 25));
+            }
+            else { //which == 2
+                entities.add(collects.createEntity(5, 25));
             }
         }
+        this.injectTotalElements(numberElements,this.gm);
+        this.injectUnclickables(unclickables,this.gm);
+        System.out.println(unclickables);
+        System.out.println(numberElements);
         return entities;
+    }
+
+    @Override
+    public void injectTotalElements(int totalElements, ClassicGameMaster gm) {
+        gm.setInitialNumberOfElements(totalElements);
+    }
+
+    @Override
+    public void injectUnclickables(int unclickables, ClassicGameMaster gm) {
+        gm.setUnclickables(unclickables);
     }
 
 

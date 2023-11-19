@@ -24,4 +24,8 @@ public interface ClassicGameMaster {
     void checkGameEntity(FixedEntity entity);
 
     void setGameLoop(GameLoop loop);
+
+    public void setUnclickables(int unclickables);
+
+    public void setInitialNumberOfElements(int initialNrElements);
 }

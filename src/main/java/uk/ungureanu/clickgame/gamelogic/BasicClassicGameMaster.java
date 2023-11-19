@@ -16,9 +16,8 @@ import java.util.List;
 public class BasicClassicGameMaster implements ClassicGameMaster {
     private GameLoop loop;
     private int removedElements = 0;
-    private boolean countedElements = false;
     private int unclickables = 0;
-    private int allElements = 0;
+    private int initialNumberOfElements = 0;
 
     public BasicClassicGameMaster() {
 
@@ -39,7 +38,7 @@ public class BasicClassicGameMaster implements ClassicGameMaster {
             MainScreen.getInstance().setPanel(failGameScreen);
         }
 
-        if(removedElements + unclickables == allElements) {
+        if(removedElements + unclickables == initialNumberOfElements) {
             //Removed all elements
             this.loop.end();
             Configurator config = MainScreen.getInstance().getConfig();
@@ -52,13 +51,9 @@ public class BasicClassicGameMaster implements ClassicGameMaster {
     @Override
     public void checkState(List<ClassicGameEntity> entities) {
         //Visitor pattern, allows different rules for different entity types
-        //TODO replace list of entities with EntityCollection object, so we know from the start how many of each
         for(ClassicGameEntity entity: entities) {
             entity.checkByGameMaster();
-            if(!countedElements)
-                allElements++;
         }
-        countedElements = true;
     }
 
      @Override
@@ -82,12 +77,20 @@ public class BasicClassicGameMaster implements ClassicGameMaster {
     @Override
     public void checkGameEntity(FixedEntity entity) {
         //Visitor checking the state of fixed entities - nothing to do in this case
-        if(!countedElements && !entity.isClickable())
-            unclickables++;
     }
 
     @Override
     public void setGameLoop(GameLoop loop) {
         this.loop = loop;
+    }
+
+    @Override
+    public void setUnclickables(int unclickables) {
+        this.unclickables = unclickables;
+    }
+
+    @Override
+    public void setInitialNumberOfElements(int initialNrElements) {
+        this.initialNumberOfElements = initialNrElements;
     }
 }
